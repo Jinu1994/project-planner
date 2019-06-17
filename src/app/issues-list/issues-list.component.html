@@ -1,6 +1,5 @@
 <h2>Issues for current sprint</h2>
-<ul class="issues">
-  <li *ngFor="let issue of issues">
-    <span class="badge">{{issue.issueKey}}</span> {{issue.summary}}
-  </li>
-</ul>
+<mat-list>
+  <mat-list-item *ngFor="let issue of issues"> <span class="badge">{{issue.issueKey}}</span> {{issue.summary}}
+  </mat-list-item>
+</mat-list>

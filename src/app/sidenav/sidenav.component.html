@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-nav-list>
+      <a class="sidenavelement" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
+        routerLink="/issues" mat-list-item href="#">
+        <mat-icon>dashboard</mat-icon> &nbsp; Issues
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="grey lighten-2" style="min-height:90px">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Project Planner</span>
+      <span class="example-fill-remaining-space"></span>
+
+      <span class="example-fill-remaining-space"></span>
+      <p class="hide-on-med-and-down" style="margin-top:-10px">
+        <mat-form-field appearance="legacy"
+          style="max-height:50px; padding-bottom: 0px; margin-bottom: 0px !important; margin-top: -10px">
+          <mat-label>Search</mat-label>
+          <input matInput>
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </p>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
