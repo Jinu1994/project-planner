@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
-  path: 'issues',
-  loadChildren: ()=> import('./issues-list/issues-list.module').then(mod=> mod.IssuesListModule)
+  path: 'Stories',
+  loadChildren: () => import('./stories/stories-list.module').then(mod => mod.StoriesListModule)
 }];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { IssuesListModule } from './issues-list/issues-list.module'
+import { StoriesListModule } from './stories/stories-list.module';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -25,7 +25,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IssuesListModule,
+    StoriesListModule,
     MatSidenavModule,
     BrowserAnimationsModule,
     MatTableModule,
@@ -37,7 +37,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatMenuModule,
     LayoutModule,
     BrowserModule,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
