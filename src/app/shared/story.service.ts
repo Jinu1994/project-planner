@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Issue } from '../shared/story';
+import { Story } from '../shared/story';
+import { environment } from '../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Storieservice {
-  getStories(): Observable<Issue[]> {
-    return of([
-      new Issue('Bizgain UI', 'DX-16237'),
-      new Issue('Bizgain Local business', 'DX-17089')
-    ]);
+  getStories(): Observable<Story[]> {
+    return this.client.get<Story[]>('stories');
   }
 
-  constructor() { }
+  constructor(private client: HttpClient) {
+   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StoriesListRoutingModule } from './stories-list-routing.module';
 import { StoriesListComponent } from './stories-list.component';
 import {MatListModule} from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {MatListModule} from '@angular/material/list';
   imports: [
     CommonModule,
     StoriesListRoutingModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ]
 })
 export class StoriesListModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Storieservice } from '../shared/story.service';
-import { Issue } from '../shared/story';
+import { Story } from '../shared/story';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-stories-list',
@@ -8,13 +9,14 @@ import { Issue } from '../shared/story';
   styleUrls: ['./stories-list.component.sass']
 })
 export class StoriesListComponent implements OnInit {
-  Stories: Issue[];
-  constructor(private Storieservice: Storieservice) { }
+  stories: Story[];
+  columns = ['id', 'summary', 'key', 'status'];
+  constructor(private storieservice: Storieservice) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getStories();
   }
-  async getHeroes() {
-    return await this.Storieservice.getStories().subscribe(Stories => this.Stories = Stories);
+  async getStories() {
+    return await this.storieservice.getStories().subscribe(stories => this.stories = stories);
   }
 }
