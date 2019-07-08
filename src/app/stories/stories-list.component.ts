@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Storieservice } from '../shared/story.service';
-import { Story } from '../shared/story';
-import { MatTableDataSource } from '@angular/material/table';
+import { Storieservice } from './stories.service';
+import { Story } from './story.model';
 
 @Component({
   selector: 'app-stories-list',
