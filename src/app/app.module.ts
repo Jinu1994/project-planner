@@ -13,6 +13,7 @@ import { StoriesListModule } from './stories/stories-list.module';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AssigneesListModule } from './assignees-list/assignees-list.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AssigneesListModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: BaseApiInterceptor, multi: true
