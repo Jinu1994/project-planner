@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IssuesService } from './issues.service';
 import { Issue } from './issue.model';
+import { SprintService } from '../shared/sprint.service';
+import { Sprint } from '../shared/sprint.model';
 
 @Component({
   selector: 'app-issues-list',
@@ -9,13 +11,20 @@ import { Issue } from './issue.model';
 })
 export class IssuesListComponent implements OnInit {
   issues: Issue[];
-  columns = ['id', 'summary', 'key', 'status'];
-  constructor(private issuesService: IssuesService) { }
+  sprints: Sprint[];
+  selectedSprintId: number;
+  columns = ['summary', 'sprint', 'status'];
+  constructor(private issuesService: IssuesService, private sprintService: SprintService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getSprints();
+    this.selectedSprintId = 95;
     this.getIssues();
   }
   async getIssues() {
-    return await this.issuesService.getIssues().subscribe(issues => this.issues = issues);
+    return await this.issuesService.getIssues(this.selectedSprintId).subscribe(issues => this.issues = issues);
+  }
+  async getSprints() {
+    return await this.sprintService.getSprints().subscribe(sprints => this.sprints = sprints);
   }
 }

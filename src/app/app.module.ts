@@ -12,7 +12,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { IssuesListModule } from './issues/issues-list.module';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';import {MatSelectModule} from '@angular/material/select';
 import { AssigneesListModule } from './assignees-list/assignees-list.module';
 
 @NgModule({

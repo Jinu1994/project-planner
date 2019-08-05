@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class IssuesService {
-  getIssues(): Observable<Issue[]> {
-    return this.client.get<Issue[]>('issues');
+  getIssues(sprint: number): Observable<Issue[]> {
+    return this.client.get<Issue[]>(`issues?sprint=${sprint}`);
   }
 
   constructor(private client: HttpClient) {
