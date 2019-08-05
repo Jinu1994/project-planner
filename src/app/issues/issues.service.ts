@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Story } from './story.model';
+import { Issue } from './issue.model';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class Storieservice {
-  getStories(): Observable<Story[]> {
-    return this.client.get<Story[]>('stories');
+export class IssuesService {
+  getIssues(): Observable<Issue[]> {
+    return this.client.get<Issue[]>('issues');
   }
 
   constructor(private client: HttpClient) {

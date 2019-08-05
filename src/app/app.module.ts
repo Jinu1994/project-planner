@@ -9,7 +9,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { StoriesListModule } from './stories/stories-list.module';
+import { IssuesListModule } from './issues/issues-list.module';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -23,7 +23,7 @@ import { AssigneesListModule } from './assignees-list/assignees-list.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoriesListModule,
+    IssuesListModule,
     MatSidenavModule,
     BrowserAnimationsModule,
     HttpClientModule,

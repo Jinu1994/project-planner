@@ -1,4 +1,4 @@
-export class Story {
+export class Issue {
     public id!: string;
     public summary!: string;
     public key!: string;
