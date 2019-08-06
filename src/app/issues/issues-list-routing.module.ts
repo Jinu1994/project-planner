@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IssuesListComponent } from './issues-list.component';
 
 const routes: Routes = [{
-    path: 'stories',
+    path: 'issues',
     component: IssuesListComponent
 }];
 
