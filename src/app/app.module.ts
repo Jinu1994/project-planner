@@ -14,6 +14,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';import {MatSelectModule} from '@angular/material/select';
 import { AssigneesListModule } from './assignees-list/assignees-list.module';
+import { SprintPlanModule } from './sprint-plan/sprint-plan.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AssigneesListModule } from './assignees-list/assignees-list.module';
     MatIconModule,
     MatListModule,
     AssigneesListModule,
+    SprintPlanModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: BaseApiInterceptor, multi: true
