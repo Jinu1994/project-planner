@@ -3,7 +3,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
     <mat-nav-list>
       <a class="sidenavelement" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
-        routerLink="/stories" mat-list-item href="#">
+        routerLink="/issues" mat-list-item href="#">
         <mat-icon>dashboard</mat-icon> &nbsp; Issues
       </a>
       <a class="sidenavelement" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"
