@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IssuesService } from './issues.service';
 import { Issue } from './issue.model';
-import { SprintService } from '../shared/sprint.service';
-import { Sprint } from '../shared/sprint.model';
+import { SprintService } from '../shared/sprints/sprint.service';
+import { Sprint } from '../shared/sprints/sprint.model';
 
 @Component({
   selector: 'app-issues-list',

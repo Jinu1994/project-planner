@@ -1,3 +1,13 @@
-<p>
-  sprint-plan works!
-</p>
+<mat-form-field>
+    <mat-label>Choose a Sprint</mat-label>
+    <mat-select [(value)]="selectedSprintId" >
+      <mat-option *ngFor="let sprint of sprints" [value]="sprint.id">
+        {{sprint.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<mat-tab-group>
+  <mat-tab *ngFor="let team of teams" [label]="team.name">
+    <app-team-plan [id]="team.id" [sprint]="selectedSprintId"></app-team-plan>
+  </mat-tab>
+</mat-tab-group>
