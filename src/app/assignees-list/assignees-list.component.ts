@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Assignee } from './assignee.model';
-import { AssigneesService } from './assignees-service';
+import { Assignee } from '../models/assignee.model';
+import { AssigneesService } from '../shared-services/assignees/assignees-service';
 
 @Component({
   selector: 'app-assignees-list',

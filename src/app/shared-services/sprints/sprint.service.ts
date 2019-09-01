@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Assignee } from './assignee.model';
 import { HttpClient } from '@angular/common/http';
+import { Sprint } from '../../models/sprint.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AssigneesService {
+export class SprintService {
 
   constructor(private client: HttpClient) { }
 
-  getAssignees(): Observable<Assignee[]> {
-    return this.client.get<Assignee[]>('assignees');
+  getSprints(): Observable<Sprint[]> {
+    return this.client.get<Sprint[]>(`sprints`);
   }
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../shared/teams/team.model';
-import { TeamService } from '@app/shared/teams/team.service';
-import { Sprint } from '@app/shared/sprints/sprint.model';
+import { Team } from '../models/team.model';
+import { TeamService } from '@app/shared-services/teams/team.service';
+import { Sprint } from '@app/models/sprint.model';
 import { IssuesService } from '@app/issues/issues.service';
-import { SprintService } from '@app/shared/sprints/sprint.service';
+import { SprintService } from '@app/shared-services/sprints/sprint.service';
 
 @Component({
   selector: 'app-sprint-plan',

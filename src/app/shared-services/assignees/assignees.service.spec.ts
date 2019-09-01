@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AssigneesService} from '../shared-services/assignees/assignees-service';
+import { AssigneesService } from './assignees.service';
 
-describe('AssigneeServiceService', () => {
+describe('AssigneesService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
