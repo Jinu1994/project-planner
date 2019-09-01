@@ -17,7 +17,7 @@ export class AssigneesListComponent implements OnInit {
   }
 
   async getAssignees() {
-    return await this.assigneeService.getAssignees().subscribe(assignees => this.assignees = assignees);
+    return await this.assigneeService.get().subscribe(assignees => this.assignees = assignees);
   }
 
 }

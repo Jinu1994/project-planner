@@ -10,7 +10,11 @@ export class AssigneesService {
 
   constructor(private client: HttpClient) { }
 
-  getAssignees(): Observable<Assignee[]> {
-    return this.client.get<Assignee[]>('assignees');
+  get(role?: string): Observable<Assignee[]> {
+    return this.client.get<Assignee[]>(`assignees${role ? `?role=${role}` : ''}`);
+  }
+
+  getByTeam(teamId: number, role?: string) {
+    return this.client.get<Assignee[]>(`teams/${teamId}/assignees${role ? `?role=${role}` : ''}`);
   }
 }

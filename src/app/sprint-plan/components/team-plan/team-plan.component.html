@@ -1,3 +1,9 @@
 <p>
-  Sprint {{sprint}}: team-plan for Team {{id}} works!
+  <mat-grid-list cols="3" rowHeight="2:1" gutterSize="10">
+    <mat-grid-tile *ngFor="let developer of developers">
+      <app-dev-plan class="dev-plan" [developer]="developer"></app-dev-plan>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+ 
 </p>
