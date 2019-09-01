@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IssuesService } from './issues.service';
+import { IssuesService } from '@app/shared-services/issues/issues.service';
 import { Issue } from '../models/issue.model';
 import { SprintService } from '../shared-services/sprints/sprint.service';
 import { Sprint } from '../models/sprint.model';

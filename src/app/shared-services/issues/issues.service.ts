@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { Issue } from '@app/models/issue.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IssuesService {
+  getIssues(sprint: number): Observable<Issue[]> {
+    return this.client.get<Issue[]>(`sprints/${sprint}/issues`);
+  }
 
-  constructor() { }
+  constructor(private client: HttpClient) {
+   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Team } from '../models/team.model';
 import { TeamService } from '@app/shared-services/teams/team.service';
 import { Sprint } from '@app/models/sprint.model';
-import { IssuesService } from '@app/issues/issues.service';
+import { IssuesService } from '@app/shared-services/issues/issues.service';
 import { SprintService } from '@app/shared-services/sprints/sprint.service';
 
 @Component({
